@@ -4,7 +4,7 @@
 
 ### Installation
 
- - composer require cawakhharkov/laravel-bbalance
+ - ```composer require cawakhharkov/laravel-balance```
  - add ```\CawaKharkov\LaravelBalance\LaravelBalanceServiceProvider::class``` to your config/app.php
  - add ```\CawaKharkov\LaravelBalance\Providers\TransactionsProvider::class,```(view composer) to your config/app.php
  - publish config ```php artisan vendor:publish```
@@ -12,11 +12,11 @@
  
  
 ### Configuration
-  - 'prefix' - route prefix for base transactions controller 
-  - 'user' - User class
-  - 'layout' -  layout that will be extended in views
-  - 'list_view' - list transaction view
-  - 'compose' - array of views where need to inject user transactions
+  - **'prefix'** - route prefix for base transactions controller 
+  - **'user'** - User class
+  - **'layout'** -  layout that will be extended in views
+  - **'list_view'** - list transaction view
+  - **'compose'** - array of views where need to inject user transactions
   
 ### Usage
   - Add  ```\CawaKharkov\LaravelBalance\Interfaces\UserHasBalance``` interface to your user model

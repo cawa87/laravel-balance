@@ -37,7 +37,8 @@
              $this->transactions = $repo;
          }
    ```    
+   
      
-   - If you want to want to echo user transactions, just add view to composer section of config, 
+  - If you want to want to echo user transactions, just add view to composer section of config, 
    and view composer will inject $transaction variable  
    

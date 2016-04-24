@@ -1,8 +1,8 @@
-# Laravel package that provide user balance and transactions functionality
+## Laravel package that provides user balance and transactions functionality
 
-## User balance = sum of transactions
+### User balance = sum of transactions
 
-## Installation
+### Installation
 
  - composer require cawakhharkov/laravel-bbalance
  - add ```\CawaKharkov\LaravelBalance\LaravelBalanceServiceProvider::class``` to your config/app.php
@@ -11,14 +11,14 @@
  - run migrations ```php artisan migrate --path=database/migrations/laravel-balance```
  
  
-## Configuration
+### Configuration
   - 'prefix' - route prefix for base transactions controller 
   - 'user' - User class
   - 'layout' -  layout that will be extended in views
   - 'list_view' - list transaction view
   - 'compose' - array of views where need to inject user transactions
   
-## Usage
+### Usage
   - Add  ```\CawaKharkov\LaravelBalance\Interfaces\UserHasBalance``` interface to your user model
   - Add ```\CawaKharkov\LaravelBalance\Models\UserBalance``` trait to your user model
    or implement transactions() and balance() methods by your own

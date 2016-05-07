@@ -24,7 +24,7 @@ class LaravelBalanceServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../views', 'laravel-balance');
 
         $this->publishes([
-            __DIR__ . '/../../config/laravel-balance.php' => config_path('laravel-balance.php'),
+            __DIR__ . '/../../config/laravel_balance.php' => config_path('laravel_balance.php'),
         ]);
 
         //      $this->app->bind('ZaLaravel\LaravelUser\Models\Interfaces\UserInterface', Config::get('auth.model'));

@@ -5,6 +5,10 @@ namespace CawaKharkov\LaravelBalance\Models;
 use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class BalanceTransaction
+ * @package CawaKharkov\LaravelBalance\Models
+ */
 class BalanceTransaction extends Model implements BalanceTransactionInterface
 {
     /**

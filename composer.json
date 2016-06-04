@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Cawakharkov\\LaravelBalance\\": "src/LaravelBalance"
+      "CawaKharkov\\LaravelBalance\\": "src/LaravelBalance"
     }
   },
   "minimum-stability": "dev"

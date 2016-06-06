@@ -14,7 +14,7 @@ trait UserBalance
     public function balance()
     {
         $income = $this->transactions()
-            ->where(['type' => 100])
+            ->where(['type' => 100,'accepted' => 1])
             ->sum('value');
 
         $outcome = $this->transactions()

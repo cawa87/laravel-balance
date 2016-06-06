@@ -46,7 +46,7 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
             'value' => $data['shopSumAmount'],
             'hash' => uniqid('transaction_', true),
             'type' => BalanceTransaction::CONST_TYPE_REFILL,
-            'user_id' => $data['userId']
+            'user_id' => $data['user_id']
         ]);
     }
 }

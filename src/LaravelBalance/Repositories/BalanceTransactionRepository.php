@@ -41,12 +41,5 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
     public function create(array $data)
     {
         //@todo implement some notification, calculation, etc.
-
-        return BalanceTransaction::create([
-            'value' => $data['shopSumAmount'],
-            'hash' => uniqid('transaction_', true),
-            'type' => BalanceTransaction::CONST_TYPE_REFILL,
-            'user_id' => $data['user_id']
-        ]);
     }
 }

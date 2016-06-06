@@ -5,7 +5,6 @@ namespace CawaKharkov\LaravelBalance\Repositories;
 
 use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use CawaKharkov\LaravelBalance\Interfaces\TransactionRepositoryInterface;
-use CawaKharkov\LaravelBalance\Models\BalanceTransaction;
 use Illuminate\Support\Facades\Auth;
 
 class BalanceTransactionRepository implements TransactionRepositoryInterface
@@ -27,9 +26,12 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
         return $this->model->get($columns);
     }
 
-    public function allAccepted($columns = array('*'))
+    public function allAcceptedForUser($columns = array('*'))
     {
-        return $this->model->where('accepted',1)->get($columns);
+        return $this->model->where([
+            'user_id' => Auth::user()->id,
+            'accepted' => 1
+        ])->get($columns);
     }
 
     public function allForUser($columns = array('*'))

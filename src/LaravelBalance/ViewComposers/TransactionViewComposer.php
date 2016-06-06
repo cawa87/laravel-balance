@@ -34,6 +34,6 @@ class TransactionViewComposer
      */
     public function compose(View $view)
     {
-        $view->with('transactions', $this->transactions->allForUser());
+        $view->with('transactions', $this->transactions->allAcceptedForUser());
     }
 }

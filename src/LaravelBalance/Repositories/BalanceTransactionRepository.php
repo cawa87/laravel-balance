@@ -27,6 +27,11 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
         return $this->model->get($columns);
     }
 
+    public function allAccepted($columns = array('*'))
+    {
+        return $this->model->where('accepted',1)->get($columns);
+    }
+
     public function allForUser($columns = array('*'))
     {
         return $this->model

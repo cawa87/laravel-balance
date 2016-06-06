@@ -78,5 +78,14 @@ class BalanceTransaction extends Model implements BalanceTransactionInterface
        return $this->belongsTo(config('laravel_balance.user'));
     }
 
+    /**
+     * Get type label
+     * @return mixed
+     */
+    public function getType()
+    {
+        return $this->typeLabels[$this->type];
+    }
+
 
 }

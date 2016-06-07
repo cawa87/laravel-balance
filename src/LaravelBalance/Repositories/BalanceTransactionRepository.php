@@ -48,5 +48,6 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
     public function create(array $data)
     {
         //@todo implement some notification, calculation, etc.
+        return $this->model->create($data);
     }
 }

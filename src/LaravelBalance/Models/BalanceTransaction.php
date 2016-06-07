@@ -27,6 +27,7 @@ class BalanceTransaction extends Model implements BalanceTransactionInterface
         'value',
         'hash',
         'type',
+        'accepted',
         'user_id'
     ];
 

@@ -3,9 +3,11 @@
 namespace CawaKharkov\LaravelBalance;
 
 
+use CawaKharkov\LaravelBalance\Interfaces\BalanceServiceInterface;
 use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use CawaKharkov\LaravelBalance\Models\BalanceTransaction;
 use CawaKharkov\LaravelBalance\Repositories\BalanceTransactionRepository;
+use CawaKharkov\LaravelBalance\Services\BalanceService;
 use Illuminate\Support\ServiceProvider;
 use CawaKharkov\LaravelBalance\Interfaces\TransactionRepositoryInterface;
 
@@ -46,6 +48,7 @@ class LaravelBalanceServiceProvider extends ServiceProvider
     {
         $this->app->bind(TransactionRepositoryInterface::class, BalanceTransactionRepository::class);
         $this->app->bind(BalanceTransactionInterface::class, BalanceTransaction::class);
+        $this->app->bind(BalanceServiceInterface::class, BalanceService::class);
     }
 
     /**

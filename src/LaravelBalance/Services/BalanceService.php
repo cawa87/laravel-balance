@@ -29,7 +29,7 @@ class BalanceService implements BalanceServiceInterface
      */
     public function writeOff($amount,$userId)
     {
-        if ($this->canPay($amount, $userId)) {
+        if (!$this->canPay($amount, $userId)) {
             return false;
 
         }

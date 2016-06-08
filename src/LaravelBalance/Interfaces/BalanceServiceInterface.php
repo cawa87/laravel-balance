@@ -8,7 +8,7 @@ namespace CawaKharkov\LaravelBalance\Interfaces;
  */
 interface BalanceServiceInterface
 {
-    public function writeOff($amount);
-    public function add($amount);
+    public function writeOff($amount,$userId);
+    public function add($amount,$userId);
     
 }

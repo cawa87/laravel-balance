@@ -28,11 +28,11 @@ class BalanceService implements BalanceServiceInterface
      * Write off from user(current) balance
      * @param $amount
      */
-    public function writeOff($amount)
+    public function writeOff($amount,$userId)
     {
         // TODO: Implement writeOff() method.
         $this->repository->create([
-            'user_id' => Auth::user()->id,
+            'user_id' => $userId,
             'value' => $amount,
             'accepted' => 1,
             'hash' => uniqid('transaction_', true),
@@ -41,7 +41,7 @@ class BalanceService implements BalanceServiceInterface
         
     }
 
-    public function add($amount)
+    public function add($amount,$userId)
     {
         // TODO: Implement add() method.
     }

@@ -18,7 +18,7 @@ class CreateBalanceTransactionTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('hash', 60)->nullable();
             $table->float('value');
-            $table->tinyInteger('type');
+            $table->integer('type',6);
             $table->boolean('accepted')->default(0);
 
             $table->foreign('user_id')->references('id')->on('users');

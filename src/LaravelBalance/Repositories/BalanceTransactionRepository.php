@@ -6,10 +6,19 @@ namespace CawaKharkov\LaravelBalance\Repositories;
 use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use CawaKharkov\LaravelBalance\Interfaces\TransactionRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
+use Event;
+use LaravelBalance\Events\TransactionCreated;
 
+/**
+ * Class BalanceTransactionRepository
+ * @package CawaKharkov\LaravelBalance\Repositories
+ */
 class BalanceTransactionRepository implements TransactionRepositoryInterface
 {
 
+    /**
+     * @var BalanceTransactionInterface
+     */
     protected $model;
 
     /**
@@ -21,11 +30,19 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
         $this->model = $model;
     }
 
+    /**
+     * @param array $columns
+     * @return mixed
+     */
     public function all($columns = array('*'))
     {
         return $this->model->get($columns);
     }
 
+    /**
+     * @param array $columns
+     * @return mixed
+     */
     public function allAcceptedForUser($columns = array('*'))
     {
         return $this->model->where([
@@ -34,6 +51,10 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
         ])->get($columns);
     }
 
+    /**
+     * @param array $columns
+     * @return mixed
+     */
     public function allForUser($columns = array('*'))
     {
         return $this->model
@@ -48,6 +69,10 @@ class BalanceTransactionRepository implements TransactionRepositoryInterface
     public function create(array $data)
     {
         //@todo implement some notification, calculation, etc.
-        return $this->model->create($data);
+        $transaction = $this->model->create($data);
+
+        Event::fire(new TransactionCreated($transaction));
+
+        return $transaction;
     }
 }

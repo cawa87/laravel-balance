@@ -7,7 +7,7 @@ use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use CawaKharkov\LaravelBalance\Interfaces\TransactionRepositoryInterface;
 use Illuminate\Support\Facades\Auth;
 use Event;
-use LaravelBalance\Events\TransactionCreated;
+use CawaKharkov\LaravelBalance\Events\TransactionCreated;
 
 /**
  * Class BalanceTransactionRepository

@@ -4,7 +4,7 @@ namespace CawaKharkov\LaravelBalance\Events;
 
 use App\Podcast;
 use App\Events\Event;
-use CawaKharkov\LaravelBalance\Interfaces\BalanceServiceInterface;
+use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use Illuminate\Queue\SerializesModels;
 
 /**
@@ -21,7 +21,7 @@ class TransactionCreated extends Event
      * Create a new event instance.
      * @param BalanceServiceInterface $transaction
      */
-    public function __construct(BalanceServiceInterface $transaction)
+    public function __construct(BalanceTransactionInterface $transaction)
     {
         $this->transaction = $transaction;
     }

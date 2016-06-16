@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelBalance\Events;
+namespace CawaKharkov\LaravelBalance\Events;
 
 use App\Podcast;
 use App\Events\Event;

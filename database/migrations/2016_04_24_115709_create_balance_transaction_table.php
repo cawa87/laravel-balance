@@ -15,13 +15,16 @@ class CreateBalanceTransactionTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
+
             $table->string('hash', 60)->nullable();
             $table->float('value');
-            $table->integer('type',6);
+            $table->integer('type')->length(6)->unsigned();
             $table->boolean('accepted')->default(0);
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+
+
             $table->timestamps();
 
         });

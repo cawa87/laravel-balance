@@ -18,5 +18,5 @@
       "CawaKharkov\\LaravelBalance\\": "src/LaravelBalance"
     }
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "stable"
 }

@@ -4,7 +4,7 @@
 
 ### Installation
 
- - ```composer require cawakhharkov/laravel-balance```
+ - ```composer require cawakharkov/laravel-balance```
  - add ```\CawaKharkov\LaravelBalance\LaravelBalanceServiceProvider::class``` to your config/app.php
  - add ```\CawaKharkov\LaravelBalance\Providers\TransactionsProvider::class,```(view composer) to your config/app.php
  - publish config ```php artisan vendor:publish```

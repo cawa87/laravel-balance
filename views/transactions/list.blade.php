@@ -5,18 +5,16 @@
         <div class="main-container">
             <div class="row">
                 <div class="col-md-12 page-content">
-                  <ul>
-                      @foreach($transactions as $transaction)
-                      <li>
-                          {{$transaction->hash}}/{{$transaction->value}}
-                      </li>
-                      @endforeach
-                  </ul>
+                    <ul>
+                        @foreach($transactions as $transaction)
+                            <li>
+                                {{$transaction->hash}}/{{$transaction->value}}
+                            </li>
+                        @endforeach
+                    </ul>
 
                 </div>
             </div>
-            <!--/.page-content-->
         </div>
-    </div>
     </div>
 @endsection

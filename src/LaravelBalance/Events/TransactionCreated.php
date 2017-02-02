@@ -9,7 +9,7 @@ use Illuminate\Queue\SerializesModels;
  * Class TransactionCreated
  * @package LaravelBalance\Events
  */
-class TransactionCreated extends Event
+class TransactionCreated
 {
     use SerializesModels;
 

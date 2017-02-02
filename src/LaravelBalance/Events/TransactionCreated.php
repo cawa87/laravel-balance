@@ -2,6 +2,7 @@
 
 namespace CawaKharkov\LaravelBalance\Events;
 
+use Event;
 use CawaKharkov\LaravelBalance\Interfaces\BalanceTransactionInterface;
 use Illuminate\Queue\SerializesModels;
 
@@ -9,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
  * Class TransactionCreated
  * @package LaravelBalance\Events
  */
-class TransactionCreated
+class TransactionCreated extends Event
 {
     use SerializesModels;
 

@@ -1,6 +1,6 @@
 ## Laravel package that provides user balance and transactions functionality
 
-### Now working only with Laravel > 5.3, for 5.2 will be created separet branch
+### *Now working only with Laravel > 5.3, for 5.2 will be created separet branch*
 
 ### User balance = sum of transactions
 
